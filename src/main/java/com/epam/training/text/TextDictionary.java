@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class TextDictionary {
     public Map<String, Integer> dictionary(String text) {
         Map<String, Integer> result = new HashMap<>();
-        String[] strings = text.replaceAll("\\pP", "").toLowerCase().split(" ");
+        String[] strings = text.replaceAll("[\\pP]", " ").replaceAll("\\s+", " ").toLowerCase().split(" ");
         Set<String> words = new HashSet<>(Arrays.asList(strings));
         for (String word : words) {
             int count = 0;

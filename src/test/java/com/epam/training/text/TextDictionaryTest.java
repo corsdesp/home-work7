@@ -13,7 +13,7 @@ public class TextDictionaryTest {
         dictionary.put("qwerty", 3);
         dictionary.put("trewq", 1);
 
-        Map<String, Integer> result = new TextDictionary().dictionary("qwerty qwerty, trewq, !qWerty!");
+        Map<String, Integer> result = new TextDictionary().dictionary("QWERTY: qwerty, trewq- !qWerty!");
         Assert.assertTrue(dictionary.equals(result));
     }
 }
